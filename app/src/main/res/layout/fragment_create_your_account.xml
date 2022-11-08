@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.CreateYourAccountFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start_guideline"
+        android:layout_width="@dimen/dp_1"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="24dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/end_guideline"
+        android:layout_width="@dimen/dp_1"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="25dp" />
+
+
+    <TextView
+        style="@style/mulishThemeRegular"
+        android:id="@+id/tv_create_account"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/create_your_account"
+        android:textSize="30sp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        />
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/mulishThemeRegular"
+        android:id="@+id/tv_first_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="First Name"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/tv_create_account"
+        android:layout_marginTop="29dp"
+        />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/InputFiledTheme"
+        android:id="@+id/til_first_name"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintTop_toBottomOf="@id/tv_first_name"
+        >
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/edit_text_curve_border"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+<!--     last name  -->
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/mulishThemeRegular"
+        android:id="@+id/tv_last_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last Name"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/til_first_name"
+        android:layout_marginTop="24dp"
+        />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/InputFiledTheme"
+        android:id="@+id/til_last_name"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintTop_toBottomOf="@id/tv_last_name"
+        >
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/edit_text_curve_border"
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+<!--    phone number -->
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/mulishThemeRegular"
+        android:id="@+id/tv_phone_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone No(Optional) "
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/til_last_name"
+        android:layout_marginTop="24dp"
+        />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/InputFiledTheme"
+        android:id="@+id/til_phone_no"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintTop_toBottomOf="@id/tv_phone_no"
+        >
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/edit_text_curve_border"
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+<!--    enter password -->
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/mulishThemeRegular"
+        android:id="@+id/tv_enter_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Password"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/til_phone_no"
+        android:layout_marginTop="24dp"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/InputFiledTheme"
+        android:id="@+id/til_enter_password"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintTop_toBottomOf="@id/tv_enter_password"
+        >
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/edit_text_curve_border"
+
+            />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+<!--    password conditions-->
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/mulishThemeRegular"
+        android:id="@+id/tv_must_in_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Use a minimum of 12 characters, including uppercase letter, lowercase letters and numbers."
+        android:textColor="#9E9E9E"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintTop_toBottomOf="@id/til_enter_password"
+        android:layout_marginTop="9dp"
+
+        />
+<!--  compose view for term's and condition  -->
+
+    <androidx.compose.ui.platform.ComposeView
+        android:id = "@+id/compose_view"
+        android:layout_width="0dp"
+        android:layout_height="100dp"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/tv_must_in_password"
+        android:layout_marginTop="24dp"
+        android:visibility="gone"
+        />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        style="@style/mulishThemeRegular"
+        android:id="@+id/tv_already_have_an_account"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Already have an account? Login"
+        android:gravity="center"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintBottom_toTopOf="@id/bt_sign"
+
+        android:layout_marginBottom="14dp"
+        />
+
+
+
+
+<!--    signup bottom-->
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_sign"
+        android:layout_width="@dimen/dp_0"
+        android:layout_height="@dimen/dp_40"
+        android:text="SignUp"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:background="@drawable/black_button_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        android:layout_marginEnd="@dimen/dp_3"
+        android:layout_marginBottom="46dp" />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

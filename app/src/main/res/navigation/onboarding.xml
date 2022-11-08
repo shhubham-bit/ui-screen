@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/onboarding"
+    app:startDestination="@id/onBoardFragment">
+
+    <fragment
+        android:id="@+id/onBoardFragment"
+        android:name="com.trainee.appinventiv.eccoscreens.ui.TutorialFragment"
+        android:label="fragment_on_board"
+        tools:layout="@layout/fragment_tutorial" >
+        <action
+            android:id="@+id/action_onBoardFragment_to_emailEnteredFragment"
+            app:destination="@id/emailEnteredFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/emailEnteredFragment"
+        android:name="com.trainee.appinventiv.eccoscreens.ui.LoginFragment"
+        android:label="fragment_email_entered"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_emailEnteredFragment_to_createYourAccountFragment"
+            app:destination="@id/createYourAccountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createYourAccountFragment"
+        android:name="com.trainee.appinventiv.eccoscreens.ui.CreateYourAccountFragment"
+        android:label="fragment_create_your_account"
+        tools:layout="@layout/fragment_create_your_account" />
+</navigation>

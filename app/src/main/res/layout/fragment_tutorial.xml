@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <import type="android.view.View"/>
+        <import type="com.trainee.appinventiv.eccoscreens.R"/>
+        <variable
+            name="viewModel"
+            type="com.trainee.appinventiv.eccoscreens.viewmodel.TutorialViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.TutorialFragment">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/start_guideline"
+            android:layout_width="@dimen/dp_1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="@dimen/dp_24" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/end_guideline"
+            android:layout_width="@dimen/dp_1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="@dimen/dp_21" />
+
+        <TextView
+            android:id="@+id/tv_personalise"
+            style="@style/personaliseTutorialTheme"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintEnd_toEndOf="@id/end_guideline"
+            app:layout_constraintTop_toTopOf="parent"
+            android:text="@={viewModel.textListener}"
+            />
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewPager"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintEnd_toEndOf="@id/end_guideline"
+            app:layout_constraintBottom_toTopOf="@id/tabLayout_dot_indicator"
+            android:layout_marginBottom="42dp"
+            android:visibility="@{viewModel.hideTutorial ? View.GONE : View.VISIBLE }"
+            />
+
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout_dot_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:tabBackground="@drawable/tab_selector"
+            app:layout_constraintBottom_toTopOf="@id/bt_next"
+            android:layout_marginBottom="14dp"
+            app:tabPaddingEnd="8dp"
+            app:tabIndicatorColor="@android:color/transparent"
+            app:tabGravity="center"
+            android:visibility="@{viewModel.hideTutorial ?  View.INVISIBLE : View.VISIBLE  }"
+            />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_dummyImage"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="fitXY"
+            app:shapeAppearanceOverlay="@style/round"
+            android:src="@drawable/tutorial_image1"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintEnd_toEndOf="@id/end_guideline"
+            app:layout_constraintBottom_toTopOf="@id/tabLayout_dot_indicator"
+            android:layout_marginBottom="64dp"
+            android:paddingBottom="10dp"
+            android:visibility="@{viewModel.hideTutorial ?  View.VISIBLE  : View.GONE }"
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/bt_next"
+            android:layout_width="@dimen/dp_0"
+            android:layout_height="@dimen/dp_40"
+            android:text='@{viewModel.hideTutorial ? context.getString(R.string.Login) : context.getString(R.string.Next)}'
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:background="@drawable/black_button_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/start_guideline"
+            app:layout_constraintEnd_toEndOf="@id/end_guideline"
+            android:layout_marginEnd="@dimen/dp_3"
+            android:layout_marginBottom="40dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

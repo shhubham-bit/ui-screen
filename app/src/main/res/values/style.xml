@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="personaliseTutorialTheme" parent="@android:style/TextAppearance">
+        <item name="android:fontFamily">@font/mulish_medium</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">20sp</item>
+
+    </style>
+<!--    mulish medium for header and button text-->
+<!--    mulish regular for small text like text above edittext-->
+
+    <style name="mulishThemeRegular" parent="@android:style/TextAppearance">
+        <item name="android:fontFamily">@font/mulish_regular</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="mulishThemeMedium" parent="@android:style/TextAppearance">
+        <item name="android:fontFamily">@font/mulish_medium</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="InputFiledTheme"  parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+<!--        <item name="android:fontFamily">@font/mulish_regular</item>-->
+        <item name="android:textColor">@color/black</item>
+<!--        <item name="android:textSize">10sp</item>-->
+<!--        <item name="android:layout_width">0dp</item>-->
+<!--        <item name="android:layout_height">wrap_content</item>-->
+
+    </style>
+
+    <style name="round">
+        <item name="cornerSize">5%</item>
+    </style>
+
+    <style name="Rounded" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">40dp</item>
+        <item name="borderWidth">1dp</item>
+
+
+
+
+
+        // for boxStroke color change
+    </style>
+
+
+<!--  material edit text style -->
+
+    <style name="Widget.AppTheme.TextInputLayoutList" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="hintTextAppearance">@style/TextAppearance.AppTheme.TextInputLayout.HintTextAlt</item>
+
+        <item name="boxStrokeColor">#D9D9D9</item>
+        <item name="android:maxLength">30</item>
+        <item name="boxStrokeWidth">1dp</item>
+
+        <!--        <item name="android:textColorHint">@color/text_color_hint</item>-->
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+<!--        <item name="android:layout_marginStart">24dp</item>-->
+<!--        <item name="android:layout_marginEnd">24dp</item>-->
+
+
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="helperTextTextColor">@color/red</item>
+        <item name="helperTextEnabled">true</item>
+        <item name="shapeAppearance">@style/Rounded</item>
+
+        <!--        <item name="android:textColorHint">@color/greenTeal</item>-->
+        <item name="layout_constraintEnd_toEndOf">parent</item>
+        <item name="layout_constraintStart_toStartOf">parent</item>
+        <!--        <item name="android:singleLine">true</item>-->
+
+        <!--        <item name="android:textColor">@color/darkSlateGrey</item>-->
+        <!--        <item name="android:textSize">@dimen/_15ssp</item>-->
+        <!--        <item name="fontFamily">@font/work_sans</item>-->
+
+
+    </style>
+
+    <style name="TextAppearance.AppTheme.TextInputLayout.HintTextAlt" parent="TextAppearance.MaterialComponents.Subtitle2"/>
+
+
+
+</resources>
