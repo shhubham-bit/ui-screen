@@ -87,4 +87,10 @@ dependencies {
     implementation "com.google.accompanist:accompanist-appcompat-theme:0.25.1"
     def compose_version = "1.2.0"
     implementation("androidx.compose.runtime:runtime:$compose_version")
+
+
+    def version = "1.0.6"
+
+    implementation"com.intuit.sdp:sdp-android:1.0.6"
+    implementation"com.intuit.ssp:ssp-android:1.0.6"
 }

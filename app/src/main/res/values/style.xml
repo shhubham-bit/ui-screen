@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools">
     <style name="personaliseTutorialTheme" parent="@android:style/TextAppearance">
-        <item name="android:fontFamily">@font/mulish_medium</item>
+        <item name="android:fontFamily">@font/mulish_light</item>
         <item name="android:textColor">@color/black</item>
-        <item name="android:textSize">20sp</item>
+        <item name="android:textSize">22sp</item>
 
     </style>
 <!--    mulish medium for header and button text-->
@@ -19,6 +19,28 @@
         <item name="android:textColor">@color/black</item>
     </style>
 
+    <style name="mulishThemeSemiBold" parent="@android:style/TextAppearance">
+        <item name="android:fontFamily">@font/mulish_semi_bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="editTextView" parent="ThemeOverlay.Material3.TextInputEditText">
+        <item name="android:textSize">14sp</item>
+        <item name="fontFamily">@font/mulish_semi_bold</item>
+        <item name="android:textColor">@color/color_111111</item>
+        <item name="maxLines">1</item>
+        <item name="android:maxLength">50</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/_40sdp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:textCursorDrawable">@color/black</item>
+        <item name="android:background">@drawable/edit_text_curve_border</item>
+    </style>
+
+<!--    <style name="passwordTextInputLayout"  parent="TextInput">-->
+
+<!--    </style>-->
+
     <style name="InputFiledTheme"  parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
 
 <!--        <item name="android:fontFamily">@font/mulish_regular</item>-->
@@ -31,6 +53,10 @@
 
     <style name="round">
         <item name="cornerSize">5%</item>
+    </style>
+
+    <style name="round50">
+        <item name="cornerSize">50%</item>
     </style>
 
     <style name="Rounded" parent="ShapeAppearance.MaterialComponents.SmallComponent">

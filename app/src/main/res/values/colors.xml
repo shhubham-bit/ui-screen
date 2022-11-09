@@ -10,4 +10,6 @@
 
     <color name="vistaWhite">#F7F9F7</color>
     <color name="red">#FF0000</color>
+    <color name="color_111111">#111111</color>
+    <color name="color_757575">#757575</color>
 </resources>

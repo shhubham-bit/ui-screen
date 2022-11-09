@@ -14,4 +14,16 @@
     <string name="create_your_account">Create your account</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="verification_link_sent">Verification link Sent</string>
+    <string name="verification_description">Thanks for submitting your email address. A verification link has been sent on the Email ID: alisha.nasim@appinventiv.com with the information needed to reset your password. The email might take a couple of minutes to reach your account. Please check your junk mail to ensure you receive it.</string>
+    <string name="resend_link">Resend Link</string>
+    <string name="sec_60">00:60</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="confirm_password_description">Reset your password and access your account just anytime</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="password_limits">Use a minimum of 12 characters, including uppercase letter, lowercase letters and numbers.</string>
+    <string name="submit">Submit</string>
+    <string name="first_name">First Name</string>
+    <string name="fret_not_reset_your_password_in_a_single_click">Fret not! reset your password in a single click!</string>
 </resources>

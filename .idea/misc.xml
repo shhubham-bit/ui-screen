@@ -10,12 +10,17 @@
         <entry key="app/src/main/res/drawable/selected_dot.xml" value="0.189" />
         <entry key="app/src/main/res/drawable/skip_bg.xml" value="0.189" />
         <entry key="app/src/main/res/drawable/tab_selector.xml" value="0.14" />
+        <entry key="app/src/main/res/drawable/tick_bg.xml" value="0.189" />
+        <entry key="app/src/main/res/drawable/toggle_password.xml" value="0.189" />
         <entry key="app/src/main/res/layout/activity_ecco_splash_screen.xml" value="0.2" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_confirm_password.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/fragment_create_your_account.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_ecco_splash.xml" value="0.35625" />
-        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.5164319248826291" />
         <entry key="app/src/main/res/layout/fragment_on_board.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_password_verification_link.xml" value="0.5" />
+        <entry key="app/src/main/res/layout/fragment_reset_password.xml" value="0.35625" />
         <entry key="app/src/main/res/layout/input_test_field.xml" value="0.35520833333333335" />
         <entry key="app/src/main/res/layout/item_walk_through.xml" value="0.35520833333333335" />
       </map>
@@ -26,12 +31,5 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
-  </component>
-  <component name="VisualizationToolProject">
-    <option name="state">
-      <ProjectState>
-        <option name="scale" value="0.5" />
-      </ProjectState>
-    </option>
   </component>
 </project>
