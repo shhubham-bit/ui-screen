@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/onboarding"
-    app:startDestination="@id/onBoardFragment">
+    app:startDestination="@id/provideBasicDetailsFragment">
 
     <fragment
         android:id="@+id/onBoardFragment"
@@ -28,4 +28,9 @@
         android:name="com.trainee.appinventiv.eccoscreens.ui.CreateYourAccountFragment"
         android:label="fragment_create_your_account"
         tools:layout="@layout/fragment_create_your_account" />
+    <fragment
+        android:id="@+id/provideBasicDetailsFragment"
+        android:name="com.trainee.appinventiv.eccoscreens.ui.ProvideBasicDetailsFragment"
+        android:label="fragment_provide_basic_details"
+        tools:layout="@layout/fragment_provide_basic_details" />
 </navigation>

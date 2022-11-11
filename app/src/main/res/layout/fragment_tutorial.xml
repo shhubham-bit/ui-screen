@@ -92,7 +92,7 @@
             android:text='@{viewModel.hideTutorial ? context.getString(R.string.Login) : context.getString(R.string.Next)}'
             android:textAllCaps="false"
             android:textColor="@color/white"
-            android:background="@drawable/black_button_bg"
+            android:background="@drawable/button_state_bg"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@id/start_guideline"
             app:layout_constraintEnd_toEndOf="@id/end_guideline"

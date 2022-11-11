@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.ProvideBasicDetailsFragment">
+
+<!-- guidelines   -->
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/start_guideline"
+        android:layout_width="@dimen/dp_1"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/_24sdp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/end_guideline"
+        android:layout_width="@dimen/dp_1"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/_24sdp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top_guideline"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:orientation="horizontal"
+       app:layout_constraintGuide_begin="@dimen/_16sdp"/>
+
+<!--    guideline-->
+
+<!--    header -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_basic_detail_header"
+        style="@style/contentHeader"
+        android:text="@string/please_provide_your_basic_details"
+        app:layout_constraintTop_toTopOf="@id/top_guideline"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        />
+
+<!--    date of birth  -->
+
+    <TextView
+        android:id="@+id/tv_date_of_birth"
+        style="@style/mulishThemeSemiBold"
+        android:textSize="12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/tv_basic_detail_header"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:text="@string/date_of_birth"
+        />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/InputFiledTheme"
+        android:id="@+id/til_date_of_birth"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintTop_toBottomOf="@id/tv_date_of_birth"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_date_of_birth"
+            style="@style/editTextView"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_calender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_calender"
+        app:layout_constraintEnd_toEndOf="@id/til_date_of_birth"
+        app:layout_constraintTop_toTopOf="@id/til_date_of_birth"
+        app:layout_constraintBottom_toBottomOf="@id/til_date_of_birth"
+        android:layout_marginEnd="@dimen/_13sdp"
+        />
+
+<!--  select gender  -->
+
+    <TextView
+        android:id="@+id/tv_gender"
+        style="@style/mulishThemeSemiBold"
+        android:textSize="12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/til_date_of_birth"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:text="@string/gender"
+        />
+
+    <Spinner
+        android:id="@+id/spinner_gender"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edit_text_curve_border"
+        android:dropDownVerticalOffset="@dimen/_16sdp"
+        android:dropDownSelector="@color/teal_200"
+        android:overlapAnchor="false"
+        android:popupBackground="@drawable/dropdown_gender"
+        android:popupElevation="@dimen/dp_0"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/tv_gender"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/gender_drop_down_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_drop_down_arrow"
+            app:layout_constraintEnd_toEndOf="@id/spinner_gender"
+            app:layout_constraintTop_toTopOf="@id/spinner_gender"
+            app:layout_constraintBottom_toBottomOf="@id/spinner_gender"
+            android:layout_marginEnd="@dimen/_13sdp"
+            />
+
+<!--    -->
+
+<!--    shoes size-->
+    <TextView
+        android:id="@+id/tv_shoe_size"
+        style="@style/mulishThemeSemiBold"
+        android:textSize="12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintTop_toBottomOf="@id/spinner_gender"
+        android:layout_marginTop="@dimen/_24sdp"
+        android:text="@string/shoe_size"
+        />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_show_size_list"
+        style="@style/editTextView"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_width="0dp"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintTop_toBottomOf="@id/tv_shoe_size"
+       />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/shoe_size_drop_down_arrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_drop_down_arrow"
+        app:layout_constraintEnd_toEndOf="@id/tv_show_size_list"
+        app:layout_constraintTop_toTopOf="@id/tv_show_size_list"
+        app:layout_constraintBottom_toBottomOf="@id/tv_show_size_list"
+        android:layout_marginEnd="@dimen/_13sdp"
+
+        />
+
+
+
+
+    <androidx.compose.ui.platform.ComposeView
+        android:id="@+id/composeView"
+        android:layout_width="0dp"
+        android:layout_height="121dp"
+        app:layout_constraintStart_toStartOf="@id/start_guideline"
+        app:layout_constraintEnd_toEndOf="@id/end_guideline"
+        app:layout_constraintTop_toBottomOf="@id/tv_show_size_list"
+        android:layout_marginTop="16dp"
+        android:visibility="gone"
+        />
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

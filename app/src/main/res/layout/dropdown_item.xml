@@ -1,0 +1,12 @@
+<TextView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/textView"
+    android:layout_width="match_parent"
+    android:textColor="@color/black"
+    android:fontFamily="@font/mulish_semi_bold"
+    android:textSize="@dimen/_14ssp"
+    android:paddingStart="@dimen/_22sdp"
+    android:paddingBottom="@dimen/_6sdp"
+    android:paddingTop="@dimen/_10sdp"
+    android:layout_height="wrap_content"
+    android:text="male" />

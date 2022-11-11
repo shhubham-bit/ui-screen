@@ -26,4 +26,15 @@
     <string name="submit">Submit</string>
     <string name="first_name">First Name</string>
     <string name="fret_not_reset_your_password_in_a_single_click">Fret not! reset your password in a single click!</string>
+    <string name="please_provide_your_basic_details">Please provide your basic details</string>
+    <string name="date_of_birth">Date of Birth</string>
+    <string name="gender">Gender</string>
+    <string name="shoe_size">Shoe Size</string>
+
+
+    <string-array name="feelings">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Prefer not to say</item>
+    </string-array>
 </resources>
