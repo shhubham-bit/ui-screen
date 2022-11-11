@@ -2,6 +2,7 @@ package com.trainee.appinventiv.eccoscreens.ui
 
 import android.animation.ObjectAnimator
 import android.annotation.SuppressLint
+import android.app.DatePickerDialog
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -27,6 +28,9 @@ import androidx.compose.ui.unit.sp
 import androidx.fragment.app.Fragment
 import com.trainee.appinventiv.eccoscreens.R
 import com.trainee.appinventiv.eccoscreens.databinding.FragmentProvideBasicDetailsBinding
+import java.text.DecimalFormat
+import java.text.NumberFormat
+import java.util.*
 
 
 class ProvideBasicDetailsFragment : Fragment(), AdapterView.OnItemSelectedListener {
@@ -63,6 +67,10 @@ class ProvideBasicDetailsFragment : Fragment(), AdapterView.OnItemSelectedListen
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         Log.d("shubham","viewcreated")
+
+        binding.tvDob.setOnClickListener {
+            setDateOnTextView()
+        }
         genderDropDown()
         binding.spinnerGender.onItemSelectedListener = this
 
@@ -87,6 +95,21 @@ class ProvideBasicDetailsFragment : Fragment(), AdapterView.OnItemSelectedListen
         }
 
 
+    }
+
+    @SuppressLint("SetTextI18n")
+    private fun setDateOnTextView() {
+        val c = Calendar.getInstance()
+        val year = c.get(Calendar.YEAR)
+        val month = c.get(Calendar.MONTH)
+        val day = c.get(Calendar.DAY_OF_MONTH)
+
+        val datePickerDialog = DatePickerDialog(requireActivity(),
+            { view, year, monthOfYear, dayOfMonth ->
+                val f: NumberFormat = DecimalFormat("00")
+                binding.tvDob.text = f.format(monthOfYear)+" "+setMonth(monthOfYear)+" "+year.toString()
+            }, year, month, day)
+        datePickerDialog.show()
     }
 
 
@@ -131,10 +154,30 @@ class ProvideBasicDetailsFragment : Fragment(), AdapterView.OnItemSelectedListen
                         SizeCharRow(sizeList, rememberFootSize){ footSize ->
                             selectedFootedSize = footSize
                             rememberFootSize.value = footSize
+                            binding.tvShowSizeList.text = footSize.toString()
                         }
                     }
                 }
             }
+        }
+    }
+
+    private fun setMonth(month: Int) : String{
+        when(month)
+        {
+            1 -> return "January"
+            2 -> return "February"
+            3 -> return "March"
+            4 -> return "April"
+            5 -> return "May"
+            6 -> return "June"
+            7 -> return "July"
+            8 -> return "August"
+            9 -> return "September"
+            10 -> return "October"
+            11 -> return "November"
+            12 -> return "December"
+            else -> return "none"
         }
     }
 

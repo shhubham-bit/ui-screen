@@ -55,30 +55,41 @@
         android:text="@string/date_of_birth"
         />
 
-    <com.google.android.material.textfield.TextInputLayout
-        style="@style/InputFiledTheme"
-        android:id="@+id/til_date_of_birth"
-        android:layout_height="wrap_content"
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_dob"
+        style="@style/editTextView"
+        android:layout_height="@dimen/_40sdp"
         android:layout_width="0dp"
         app:layout_constraintStart_toStartOf="@id/start_guideline"
         app:layout_constraintEnd_toEndOf="@id/end_guideline"
         app:layout_constraintTop_toBottomOf="@id/tv_date_of_birth"
-        >
+        />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/et_date_of_birth"
-            style="@style/editTextView"
-            tools:ignore="SpeakableTextPresentCheck" />
-    </com.google.android.material.textfield.TextInputLayout>
+
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        style="@style/InputFiledTheme"-->
+<!--        android:id="@+id/til_date_of_birth"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_width="0dp"-->
+<!--        app:layout_constraintStart_toStartOf="@id/start_guideline"-->
+<!--        app:layout_constraintEnd_toEndOf="@id/end_guideline"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/tv_date_of_birth"-->
+<!--        >-->
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/et_date_of_birth"-->
+<!--            style="@style/editTextView"-->
+<!--            tools:ignore="SpeakableTextPresentCheck" />-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/iv_calender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_calender"
-        app:layout_constraintEnd_toEndOf="@id/til_date_of_birth"
-        app:layout_constraintTop_toTopOf="@id/til_date_of_birth"
-        app:layout_constraintBottom_toBottomOf="@id/til_date_of_birth"
+        app:layout_constraintEnd_toEndOf="@id/tv_dob"
+        app:layout_constraintTop_toTopOf="@id/tv_dob"
+        app:layout_constraintBottom_toBottomOf="@id/tv_dob"
         android:layout_marginEnd="@dimen/_13sdp"
         />
 
@@ -91,7 +102,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintStart_toStartOf="@id/start_guideline"
-        app:layout_constraintTop_toBottomOf="@id/til_date_of_birth"
+        app:layout_constraintTop_toBottomOf="@id/tv_dob"
         android:layout_marginTop="@dimen/_24sdp"
         android:text="@string/gender"
         />
